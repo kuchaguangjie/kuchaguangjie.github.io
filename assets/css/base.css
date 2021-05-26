@@ -1,0 +1,21 @@
+body {
+    background-color: bisque;
+}
+
+.hl_red {
+    color: #F00;
+}
+
+.hl_green {
+    color: #0F0;
+}
+
+.hl_large {
+    font-size: 26px
+}
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+}
