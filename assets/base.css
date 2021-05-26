@@ -1,0 +1,11 @@
+.hl_red {
+    color: #F00;
+}
+
+.hl_green {
+    color: #0F0;
+}
+
+.hl_large {
+    font-size: 20px
+}
