@@ -6,14 +6,21 @@
   <link rel="stylesheet" href="assets/css/base.css">
 </head>
 <body>
-<h2>Hello !</h2>
+<h2>Hello <span id="username" style="font-weight: bold;"></span>!</h2>
 <script src="assets/js/dynamic.js"></script>
 <script>
   let initDataRaw = window.Telegram.WebApp.initData;
   console.log(initDataRaw);
+
   let initData = window.Telegram.WebApp.initDataUnsafe;
   console.log(initData);
-  console.log("username:", initData&&initData.user?initData.user.username:"unknown");
+
+  let username = initData&&initData.user?initData.user.username:"unknown";
+  console.log("username:", username);
+
+  if (username) {
+    document.getElementById("username").textContent = username;
+  }
 </script>
 </body>
 </html>
