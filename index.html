@@ -12,7 +12,8 @@
   let initDataRaw = window.Telegram.WebApp.initData;
   console.log(initDataRaw);
   let initData = window.Telegram.WebApp.initDataUnsafe;
-  console.log("username:", initData&&initData.chat?initData.chat.username:"unknown");
+  console.log(initData);
+  console.log("username:", initData&&initData.user?initData.user.username:"unknown");
 </script>
 </body>
 </html>
