@@ -10,7 +10,8 @@
 <script src="assets/js/dynamic.js"></script>
 <script>
   let initData = window.Telegram.WebApp.initData;
-  let initObj = Object.fromEntries(new URLSearchParams('abc=foo&def=%5Basf%5D&xyz=5'));
+  console.log(initData);
+  let initObj = Object.fromEntries(new URLSearchParams(initData));
   console.log("username:", initObj && initObj.username?initObj.username:"unknown");
 </script>
 </body>
