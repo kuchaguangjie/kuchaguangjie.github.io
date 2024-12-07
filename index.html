@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/base.css">
 </head>
 <body>
-<h2>Hello <span id="username" style="color: red;"></span>!</h2>
+<h2>Hello <span id="username" style="color: red;"></span>!<span id="appType" style="color: gray;"></span></h2>
 <script src="assets/js/dynamic.js"></script>
 <script>
   // mini app,
@@ -18,10 +18,11 @@
   console.log(initData);
 
   let username = initData&&initData.user?initData.user.username:"unknown";
-  console.log("username:", username);
+  console.log("username:", username);3
 
   if (username) {
     document.getElementById("username").textContent = username;
+    document.getElementById("appType").textContent = " (mini app)";
   }
 </script>
 
@@ -31,6 +32,10 @@
   console.log("game proxy: ", gameProxy)
   let gameInitParams = gameProxy.initParams;
   console.log("game params: ", gameInitParams)
+  if (gameInitParams.username) {
+    document.getElementById("username").textContent = gameInitParams.username;
+    document.getElementById("appType").textContent = " (game)";
+  }
 </script>
 </body>
 </html>
